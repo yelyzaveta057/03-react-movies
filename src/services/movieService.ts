@@ -10,6 +10,8 @@ export interface MoviesHttpResponse {
 export const fetchMovies = async (
   query: string
 ): Promise<Movie[]> => {
+    console.log("API_KEY:", API_KEY);
+
   const response = await axios.get<MoviesHttpResponse>(
     'https://api.themoviedb.org/3/search/movie',
     {
